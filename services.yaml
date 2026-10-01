@@ -33,9 +33,11 @@ projects:
     url: https://github.com/UserOfficeProject/user-office-factory
   - name: user-office-helm
     url: https://github.com/UserOfficeProject/user-office-helm
-  links: []
-    # - label: Production
-    #   url: https://useroffice.example.org
+  links:
+  - label: Staging
+    url: https://staging.useroffice.ess.eu/
+  - label: Production
+    url: https://useroffice.ess.eu/
 
 - id: scicat
   name: SciCat
@@ -60,6 +62,8 @@ projects:
     url: https://github.com/SciCatProject/scicat-ingestor
   - name: scicat-helm
     url: https://github.com/SciCatProject/scicat-helm
-  links: []
-    # - label: Production
-    #   url: https://scicat.example.org
+  links:
+  - label: Staging
+    url: https://staging.scicat.ess.eu
+  - label: Production
+    url: https://scicat.ess.eu
