@@ -6,62 +6,60 @@
 # (e.g. logos/scicat.svg); without one, the project's initials are shown.
 
 group:
-  name: Our Group
-  description: Services and projects maintained by the group.
+  name: SIMS TEAM
+  description: Services and projects maintained by the team.
 
 projects:
-  - id: useroffice
-    name: User Office
-    logo: https://github.com/UserOfficeProject.png
-    description: >-
-      Proposal submission, review, scheduling and experiment management
-      for user facilities.
-    tags: [proposals, scheduling, graphql]
-    website: https://userofficeproject.github.io/user-office-core/develop/
-    docs: https://userofficeproject.github.io/user-office-core/develop/
-    contacts:
-      - name: TODO Contact Name
-        role: Maintainer
-        email: todo@example.org
-    repositories:
-      - name: user-office-core
-        url: https://github.com/UserOfficeProject/user-office-core
-      - name: connector
-        url: https://github.com/UserOfficeProject/connector
-      - name: user-office-scheduler
-        url: https://github.com/UserOfficeProject/user-office-scheduler
-      - name: user-office-factory
-        url: https://github.com/UserOfficeProject/user-office-factory
-      - name: user-office-helm
-        url: https://github.com/UserOfficeProject/user-office-helm
-    links: []
-      # - label: Production
-      #   url: https://useroffice.example.org
+- id: useroffice
+  name: User Office
+  logo: https://github.com/UserOfficeProject.png
+  description: >-
+    Proposal submission, review, scheduling and experiment management for user facilities.
+  tags: [ proposals, scheduling, graphql ]
+  website: https://staging.useroffice.ess.eu/
+  docs: https://userofficeproject.github.io/user-office-core/develop/
+  contacts:
+  - name: SIMS TEAM
+    role: Maintainer
+    email: todo@example.org
+  repositories:
+  - name: user-office-core
+    url: https://github.com/UserOfficeProject/user-office-core
+  - name: connector
+    url: https://github.com/UserOfficeProject/connector
+  - name: user-office-scheduler
+    url: https://github.com/UserOfficeProject/user-office-scheduler
+  - name: user-office-factory
+    url: https://github.com/UserOfficeProject/user-office-factory
+  - name: user-office-helm
+    url: https://github.com/UserOfficeProject/user-office-helm
+  links: []
+    # - label: Production
+    #   url: https://useroffice.example.org
 
-  - id: scicat
-    name: SciCat
-    logo: https://github.com/SciCatProject.png
-    description: >-
-      Scientific metadata catalogue for managing datasets across their
-      lifecycle, from acquisition to publication.
-    tags: [metadata, datasets, catalogue]
-    website: https://www.scicatproject.org
-    docs: https://scicatproject.github.io/documentation/
-    contacts:
-      - name: TODO Contact Name
-        role: Maintainer
-        email: todo@example.org
-    repositories:
-      - name: backend
-        url: https://github.com/SciCatProject/backend
-      - name: frontend
-        url: https://github.com/SciCatProject/frontend
-      - name: scicatlive
-        url: https://github.com/SciCatProject/scicatlive
-      - name: scicat-ingestor
-        url: https://github.com/SciCatProject/scicat-ingestor
-      - name: scicat-helm
-        url: https://github.com/SciCatProject/scicat-helm
-    links: []
-      # - label: Production
-      #   url: https://scicat.example.org
+- id: scicat
+  name: SciCat
+  logo: https://github.com/SciCatProject.png
+  description: >-
+    Scientific metadata catalogue for managing datasets across their lifecycle, from acquisition to publication.
+  tags: [ metadata, datasets, catalogue ]
+  website: https://staging.scicat.ess.eu
+  docs: https://www.scicatproject.org
+  contacts:
+  - name: SIMS TEAM
+    role: Maintainer
+    email: todo@example.org
+  repositories:
+  - name: backend
+    url: https://github.com/SciCatProject/backend
+  - name: frontend
+    url: https://github.com/SciCatProject/frontend
+  - name: scicatlive
+    url: https://github.com/SciCatProject/scicatlive
+  - name: scicat-ingestor
+    url: https://github.com/SciCatProject/scicat-ingestor
+  - name: scicat-helm
+    url: https://github.com/SciCatProject/scicat-helm
+  links: []
+    # - label: Production
+    #   url: https://scicat.example.org
