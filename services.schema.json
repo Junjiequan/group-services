@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Group services config",
+  "type": "object",
+  "required": ["projects"],
+  "additionalProperties": false,
+  "properties": {
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/project" }
+    }
+  },
+  "$defs": {
+    "url": { "type": "string", "format": "uri", "pattern": "^https?://" },
+    "project": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "logo": { "type": "string", "description": "Image URL or path relative to index.html" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "website": { "$ref": "#/$defs/url" },
+        "docs": { "$ref": "#/$defs/url" },
+        "contacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "role": { "type": "string" },
+              "email": { "type": "string", "format": "email" },
+              "chat": { "$ref": "#/$defs/url", "description": "Slack/Teams/Matrix link" }
+            }
+          }
+        },
+        "repositories": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["url"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "$ref": "#/$defs/url" },
+              "provider": {
+                "enum": ["github", "gitlab", "other"],
+                "description": "Inferred from the URL host when omitted (use for self-hosted GitLab)"
+              }
+            }
+          }
+        },
+        "links": {
+          "type": "array",
+          "description": "Deployments, dashboards, anything else",
+          "items": {
+            "type": "object",
+            "required": ["label", "url"],
+            "additionalProperties": false,
+            "properties": {
+              "label": { "type": "string" },
+              "url": { "$ref": "#/$defs/url" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
